@@ -12,23 +12,65 @@
 <body>
     <div class="flex_container">
         <!-- aside-->
-        <aside class="bg_blue dim_aside"></aside>
+        <aside class="bg_blue dim_aside dim_aside_xs flex_container">
+            <div class="aside_top bg_green"></div>
+            <div class="aside_bottom bg_green"></div>
+        </aside>
         <!-- /aside-->
 
-        <div class="bg_red dim_left">
+        <div class="bg_red dim_right">
             <!-- header-->
-            <header class="bg_yellow dim_header dim_header"></header>
+            <header class="bg_yellow dim_header dim_header flex_container">
+                <div class="btn_upgrade debug_btn_upgrade"></div>
+            </header>
             <!-- /header-->
 
             <!-- main-->
-            <main class="bg_green dim_main"></main>
+            <main class=" dim_main">
+                <!-- menu main-->
+                <div class="dim_menu_main flex_container">
+                    <ul>
+                        <li>In evidenza</li>
+                        <li>Podcast</li>
+                        <li>Classifiche</li>
+                        <li>Generi e Mood</li>
+                        <li>Nuove uscite</li>
+                        <li>Scopri</li>
+                    </ul>
+                </div>
+                <!-- /menu main-->
+
+                <!-- contenuti-->
+                <section class="flex_container row">
+                    <div class="album album_lg album_md album_sm"></div>
+                    <div class="album album_lg album_md album_sm"></div>
+                    <div class="album album_lg album_md album_sm"></div>
+                    <div class="album album_lg album_md album_sm"></div>
+                    <div class="album album_lg album_md album_sm"></div>
+                    <div class="album album_lg album_md album_sm"></div>
+
+                </section>
+                <!-- /contenuti-->
+
+                <!-- contenuti-->
+                <section class="flex_container row">
+                    <div class="album album_lg album_md album_sm "></div>
+                    <div class="album album_lg album_md album_sm"></div>
+
+                </section>
+                <!-- /contenuti-->
+            </main>
             <!-- main-->
         </div>
     </div>
     
 
     <!-- footer -->
-    <footer class="bg_brown dim_footer vw_100"></footer>
+    <footer class="bg_brown dim_footer flex_container">
+        <div class="footer_left bg_yellow"></div>
+        <div class="footer_center bg_yellow"></div>
+        <div class="footer_right bg_yellow"></div>
+    </footer>
     <!-- /footer-->
 
 </body>
