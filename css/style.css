@@ -9,6 +9,13 @@
     flex-wrap: wrap;
 
 }
+
+.inline_flex_container{
+    display: inline-flex;
+    flex-wrap: wrap;
+
+}
+
 /* aside*/
 .dim_aside{
     width: 200px;
@@ -61,6 +68,7 @@
     height:100px;
     width: 100%;
     justify-content: center;
+    flex-direction: row-reverse;
 }
 
 .dim_menu_main li{
@@ -70,15 +78,15 @@
 }
 
 .row{
-    width: 100%;
     margin-right:10px;
+    justify-content: space-between;
 }
+
+
 
 .album{
     display: inline;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-left: 1%;
     margin-bottom: 10px;
     background-color: lavenderblush;
 }
@@ -89,8 +97,8 @@
     max-height: 175px;
     width: calc((100vw - 200px) /6  - 1vw);
     height: calc((100vw - 200px) /6  - 1vw);
-
 }
+
 
 
 @media screen and (max-width: 768px) {
