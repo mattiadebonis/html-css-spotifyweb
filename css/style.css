@@ -7,32 +7,72 @@
 .flex_container{
     display: flex;
     flex-wrap: wrap;
-
 }
 
-.inline_flex_container{
-    display: inline-flex;
-    flex-wrap: wrap;
+.hg_100{
+    height: 100px;
+}
 
+.bg_black{
+    background-color: black;
 }
 
 /* aside*/
 .dim_aside{
+    background-color: black;
     width: 200px;
     height: calc(100vh - 75px);
     flex-direction: column;
     justify-content: space-between;
 }
 
-.aside_top{
-    width: 100%;
-    height: 60%; /*debug*/
+
+.logo_container{
+    line-height: 100px;
 }
 
-.aside_bottom{
-    width: 100%;
-    height: 20%; /*debug*/
+#logo{
+    width: 70%;
+    padding-left: 10px;
 }
+
+.playlist_container{
+    overflow-y: auto;
+    height: calc(100vh - 275px);
+    width: 100%;
+    color: gray;
+
+}
+.aside_bottom{
+    color: gray;
+}
+
+/* header*/
+.dim_header{
+    background-color: rgb(8,11,19);
+    position:fixed;
+    width: calc(100% - 200px);
+    height: 100px;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.btn_upgrade{
+    text-transform: uppercase;
+    background-color: none;
+    color: white;
+    height: 50px;
+    margin-right: 20px;    
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 10px;
+
+    
+}
+
+/* /header*/
+
+/*sezione principale*/
 
 .dim_right{
     width: calc(100% - 200px);
@@ -40,31 +80,12 @@
     overflow-y: auto;
 }
 
-
-/* header*/
-.dim_header{
-    position:fixed;
-    height:50px;
-    width: 100%;
-    flex-direction: row-reverse;
-}
-
-.btn_upgrade{
-    height: calc(100% - 20px);
-    margin:5px 3px;    
-}
-
-/* /header*/
-
-
-/* main*/
 .dim_main{
     height:calc(100% - 50px);
     width:100%;
-
 }
-.dim_menu_main{
 
+.dim_menu_main{
     height:100px;
     width: 100%;
     justify-content: center;
@@ -79,18 +100,15 @@
 
 .row{
     margin-right:10px;
-    justify-content: space-between;
+    flex-shrink : 0;
 }
-
-
 
 .album{
-    display: inline;
     flex-wrap: wrap;
     margin-bottom: 10px;
+    margin-left: 1%;
     background-color: lavenderblush;
 }
-
 
 .album_lg{
     max-width: 175px;
@@ -98,7 +116,6 @@
     width: calc((100vw - 200px) /6  - 1vw);
     height: calc((100vw - 200px) /6  - 1vw);
 }
-
 
 
 @media screen and (max-width: 768px) {
@@ -171,8 +188,5 @@
     background-color: brown;
 }
 
-.debug_btn_upgrade{
-    background-color: black;
-    width: 200px;
-}
+
 
