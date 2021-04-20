@@ -71,52 +71,52 @@
 
 .row{
     width: 100%;
-    margin:10px;
+    margin-right:10px;
 }
 
 .album{
     display: inline;
     flex-wrap: wrap;
-
-    margin-left: 10px;
+    justify-content: space-between;
+    margin-left: 1%;
     margin-bottom: 10px;
     background-color: lavenderblush;
 }
 
 
 .album_lg{
-    width: calc(100vw/6 - 10px);
-    height: calc(100vw/6 - 10px);
+    max-width: 175px;
+    max-height: 175px;
+    width: calc((100vw - 200px) /6  - 1vw);
+    height: calc((100vw - 200px) /6  - 1vw);
 
 }
 
-
-@media screen and (max-width: 992px) {
-    
-    
-}
 
 @media screen and (max-width: 768px) {
     .album_md{
-        width: calc(100vw/4  - 10px);
-        height: calc(100vw/4  - 10px);
+        width: calc((100vw - 200px) /4  - 1vw);
+        height: calc((100vw - 200px) /4  - 1vw);
 
     }
 }
 
 @media screen and (max-width: 480px) {
-    .album_sm{
-        width: calc(100vw/2 - 10px);
-        height: calc(100vw/2 - 10px);
-    }
-}
+    .dim_right_sm{
+        width: calc(100% - 50px);
 
-@media screen and (max-width: 320px) {
+
+    }
+    .album_sm{
+        width: calc((100vw - 50px) /2  - 1vw);
+        height: calc((100vw - 50px) /2  - 1vw);
+    }
 
     .dim_aside_xs{
         width: 50px;
     }
 }
+
 
 /* /main */
 
