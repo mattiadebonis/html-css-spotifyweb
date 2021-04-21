@@ -5,7 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify di Mattia De Bonis</title>
+
+    <!-- font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- css-->
     <link rel="stylesheet" href="css/style.css">
+    <!-- viewport-->
     <meta name="viewport" content="width=device-width, user-scalable=no,
     initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     
@@ -17,33 +23,71 @@
             <div class="logo_container ">
                 <img id="logo" src="img/logo.svg" alt="logo">
             </div>
-            <div class="playlist_container">
-                <ul class="horizontal_ul">
-                    <li>Home</li>
-                    <li>Cerca</li>
-                    <li>La tua libreria</li>
+            <div class="menu_container_aside">
+                <!-- menù principale-->
+                <ul class="ul_menu_aside">
+                    <li><a href="#">
+                        <img src="img/home.svg" alt="home">
+                        Home
+                    </a></li>
+                    <li><a href="#">
+                        <img src="img/search.svg" alt="search">
+                        Cerca</a></li>
+                    <li><a href="#"
+                        ><img src="img/libreria.svg" alt="libreria"> La tua libreria</a>
+                    </li>
                 </ul>
-                <h6>Playlist</h6>
+                <!-- /menù principale-->
 
-                <ul class="horizontal_ul">
-                    <li class="new_playlist">Crea Playlist</li>
-                    <li>Nome playlist</li>
-                    <li>Nome playlist<v/li>
-                    <li>Nome playlist</li>
-                    <li>Nome playlist</li>
-                    <li>Nome playlist</li>
-                    <li>Nome playlist</li>
-                    <li>Nome playlist</li>
-                </ul>
+                <!-- menù playlist-->
+                <div class="menu_playlist_aside">
+                    <h6 class="text_uppercase text_white">Playlist</h6>
+
+                    <ul class="ul_playlist_aside">
+                        <li>
+                            <a href="#">
+                                <span class="btn_new_playlist">+</span>
+                                Crea Playlist
+                            </a>
+                         </li>
+                        <li>
+                            <a href="#">Nome playlist</a>
+                        </li>
+                        <li>
+                            <a href="#">Nome playlist</a>
+                        </li>
+                        <li>
+                            <a href="#">Nome playlist</a>
+                        </li>
+                        <li>
+                            <a href="#">Nome playlist</a>
+                        </li>
+                        <li>
+                            <a href="#">Nome playlist</a>
+                        </li>
+                        <li>
+                            <a href="#">Nome playlist</a>
+                        </li>
+                        <li>
+                            <a href="#">Nome playlist</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!-- /menù playlist-->
+                
             </div>
             
             <div class="aside_bottom">
-                <ul>
-                    <li>Installa app</li>
-                </ul>
+                <img class="img_download" src="img/download.svg" alt="download">
+                <a href="#">Installa app</a>
                 <hr>
-                <img src="img/" alt="">
-                <p>Jonh Doe</p>
+                <a href="#">
+                    <img class="img_profile" src="img/profile.svg" alt="profile">
+                    <span class="name_profile">Jonh Doe</span>
+                </a>
+                
+                
             </div>
         </aside>
         <!-- /aside-->
@@ -99,10 +143,15 @@
                 <!-- /contenuti-->
 
                 <!-- contenuti-->
-                <section class="flex_container row">
-                    <div class="album album_lg album_md album_sm "></div>
-                    <div class="album album_lg album_md album_sm"></div>
+                <section class="row clearfix">
+                    <div class="album">
+                        <div class="album_content"></div>
 
+                    </div>
+                    <div class="album">
+                        <div class="album_content"></div>
+                    </div>
+                   
                 </section>
                 <!-- /contenuti-->
             </main>
@@ -112,12 +161,12 @@
     
 
     <!-- footer -->
-    <footer class=" dim_footer flex_container">
+    <footer class="dim_footer flex_container">
         <div class="footer_left flex_container">
             <div>
-                <img src="img/sinister.jpeg" alt="sinister">
+                <img class="img_current_song" src="img/sinister.jpeg" alt="sinister">
             </div>
-            <div>
+            <div class="container_text_current_song">
                 <p>Sinister</p>
                 <p>Brano nome</p>
             </div>
