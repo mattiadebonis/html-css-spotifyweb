@@ -8,179 +8,266 @@
 
     <!-- font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
     <!-- css-->
     <link rel="stylesheet" href="css/style.css">
     <!-- viewport-->
     <meta name="viewport" content="width=device-width, user-scalable=no,
     initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    
+    <!-- font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
 </head>
 <body>
     <div class="flex_container">
         <!-- aside-->
-        <aside class="bg_black dim_aside dim_aside_xs flex_container">
-            <div class="logo_container ">
-                <img id="logo" src="img/logo.svg" alt="logo">
-            </div>
+        <aside class="side-bar flex_container">
             <div class="menu_container_aside">
+                <!-- logo spotify-->
+                <img class="hidden_xs" id="logo" src="img/logo.svg" alt="logo">
+                <img class="hidden_lg" id="logo_xs" src="img/logo-small.svg" alt="logo-small">
+
                 <!-- menù principale-->
                 <ul class="ul_menu_aside">
                     <li><a href="#">
                         <img src="img/home.svg" alt="home">
-                        Home
+                        <span class="hidden_xs">Home</span>
                     </a></li>
                     <li><a href="#">
                         <img src="img/search.svg" alt="search">
-                        Cerca</a></li>
+                        <span class="hidden_xs">Cerca</span>
+                    </a></li>
                     <li><a href="#"
-                        ><img src="img/libreria.svg" alt="libreria"> La tua libreria</a>
+                        ><img src="img/libreria.svg" alt="libreria">
+                        <span class="hidden_xs">La tua libreria</span>
+                        </a>
                     </li>
                 </ul>
                 <!-- /menù principale-->
 
                 <!-- menù playlist-->
-                <div class="menu_playlist_aside">
+                <div class="menu_playlist_aside hidden_xs padding_15">
                     <h6 class="text_uppercase text_white">Playlist</h6>
-
                     <ul class="ul_playlist_aside">
                         <li>
                             <a href="#">
                                 <span class="btn_new_playlist">+</span>
-                                Crea Playlist
+                                <span>Crea Playlist</span>
                             </a>
-                         </li>
-                        <li>
-                            <a href="#">Nome playlist</a>
                         </li>
-                        <li>
-                            <a href="#">Nome playlist</a>
-                        </li>
-                        <li>
-                            <a href="#">Nome playlist</a>
-                        </li>
-                        <li>
-                            <a href="#">Nome playlist</a>
-                        </li>
-                        <li>
-                            <a href="#">Nome playlist</a>
-                        </li>
-                        <li>
-                            <a href="#">Nome playlist</a>
-                        </li>
-                        <li>
-                            <a href="#">Nome playlist</a>
-                        </li>
-                        
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
+                        <li><a href="#">Nome playlist</a></li>
                     </ul>
                 </div>
-                <!-- /menù playlist-->
-                
+                <!-- /menù playlist-->  
             </div>
             
-            <div class="aside_bottom">
-                <img class="img_download" src="img/download.svg" alt="download">
-                <a href="#">Installa app</a>
-                <hr>
+            <!-- profilo e download-->
+            <div class="padding_15">
+                <a href="#">
+                    <img class="img_download" src="img/download.svg" alt="download">
+                    <span class="hidden_xs">Installa app</span>
+                </a>
+                <hr class= "hidden_xs">
                 <a href="#">
                     <img class="img_profile" src="img/profile.svg" alt="profile">
-                    <span class="name_profile">Jonh Doe</span>
+                    <span class="hidden_xs name_profile">Jonh Doe</span>
                 </a>
-                
-                
             </div>
+            <!-- /profilo e download-->
         </aside>
         <!-- /aside-->
 
-        <div class="bg_red dim_right dim_right_sm">
+        <div class="right_section right_section_sm">
             <!-- header-->
-            <header class="dim_header flex_container">
+            <header class="header_right_section flex_container">
                 <button class="btn_upgrade">Effettua l'upgrade</button>
             </header>
             <!-- /header-->
 
             <!-- main-->
-            <main class=" dim_main">
+            <main>
                 <!-- menu main-->
-                <div class="dim_menu_main flex_container">
-                    <ul>
-                        <li>In evidenza</li>
-                        <li>Podcast</li>
-                        <li>Classifiche</li>
-                        <li>Generi e Mood</li>
-                        <li>Nuove uscite</li>
-                        <li>Scopri</li>
+                <div class="menu_main flex_container">
+                    <ul class="text_uppercase">
+                        <li><a href="#">In evidenza</a></li>
+                        <li><a href="#">Podcast</a></li>
+                        <li><a href="#">Classifiche</a></li>
+                        <li><a href="#">Generi e Mood</a></li>
+                        <li><a href="#">Nuove uscite</a></li>
+                        <li><a href="#">Scopri</a></li>
                     </ul>
                 </div>
                 <!-- /menu main-->
-
-                <!-- contenuti-->
+                
+                <!-- Recently played-->
                 <section class="row clearfix">
+                    <h2 class="title_section">Recently played</h2>
                     <div class="album">
-                        <div class="album_content"></div>
+                        <div class="content_album">
+                            <img src="img/metal_lifting.jpg" alt="metal" class="img_album">
+                            <h6>Heavy Metal</h6>
+                            <p class="autor_album">Subtitle</p>
+
+                        </div>
+                    </div>
+                    <div class="album">
+                        <div class="content_album">
+                            <img src="img/stranger.jpeg" alt="stranger" class="img_album"> 
+                            <h6>Stranger </h6>
+                            <p class="autor_album">Kyle Dixon </p>
+                        </div>
+                    </div>
+                    <div class="album">
+                        <div class="content_album">
+                            <img src="img/aquietplace.jpeg" alt="quiet" class="img_album">
+                            <h6>A quiet </h6>
+                            <p class="autor_album">Subtitle</p>
+
+                        </div>
 
                     </div>
                     <div class="album">
-                        <div class="album_content"></div>
+                        <div class="content_album">
+                            <img src="img/split.jpeg" alt="split" class="img_album">
+                            <h6>Split</h6>
+                            <p class="autor_album">Subtitle</p>
+
+                        </div>
                     </div>
                     <div class="album">
-                        <div class="album_content"></div>
+                        <div class="content_album">
+                            <img src="img/cure.jpeg" alt="cure" class="img_album">
+                            <h6>A cure for wellness</h6>
+                            <p class="autor_album">Subtitle</p>
+                        </div>
 
                     </div>
                     <div class="album">
-                        <div class="album_content"></div>
-                    </div>
-                    <div class="album">
-                        <div class="album_content"></div>
-
-                    </div>
-                    <div class="album">
-                        <div class="album_content"></div>
+                        <div class="content_album">
+                            <img src="img/sinister.jpeg" alt="sinister" class="img_album">
+                            <h6>Sinister</h6>
+                            <p class="autor_album">Subtitle</p>
+                        </div>
 
                     </div>
 
                 </section>
-                <!-- /contenuti-->
+                <!-- /Recetly played-->
 
-                <!-- contenuti-->
+                <!-- Creato per Jonh Doe-->
                 <section class="row clearfix">
+                    <h2 class="title_section">Creato per Jonh Doe</h2>
+                    <p class="subtitle_section">Più ascolti più accurati saranno i tuoi suggerimenti</p>
                     <div class="album">
-                        <div class="album_content"></div>
+                        <div class="content_album">
+                            <img src="img/radar.jpeg" alt="radar" class="img_album">
+                            <h6>Release Radar</h6>
+                        </div>
 
                     </div>
                     <div class="album">
-                        <div class="album_content"></div>
+                        <div class="content_album">
+                            <img src="img/mixdaily.jpeg" alt="mixdaily" class="img_album">
+                            <h6>Daily Mix 1</h6>
+                            
+                        </div>
                     </div>
                    
                 </section>
-                <!-- /contenuti-->
+                <!-- /Creato per Jonh Doe-->
+
+
+                <!-- Artisti più popolari-->
+                <section class="row clearfix">
+                    <h2 class="title_section">Artisti più popolari</h2>
+                    <p class="subtitle_section">Più ascolti più accuranti saranno i suggerimenti.</p>
+                    <div class="album">
+                        <div class="content_album">
+                            <img src="img/youg.jpeg" alt="young" class="img_album circle_image">
+                            <h6>Lana del Rey</h6>
+                            
+
+                        </div>
+                    </div>
+                    <div class="album">
+                        <div class="content_album">
+                            <img src="img/einaudi.jpeg" alt="metal" class="img_album circle_image">
+                            <h6>Ludovico Einaudi</h6>
+                            
+                        </div>
+                    </div>
+                </section>
+                <!-- /Artisti più popolari-->
             </main>
             <!-- main-->
         </div>
     </div>
-    
 
     <!-- footer -->
-    <footer class="dim_footer flex_container">
-        <div class="footer_left flex_container">
+    <footer class="flex_container">
+        <div class="flex_container">
             <div>
                 <img class="img_current_song" src="img/sinister.jpeg" alt="sinister">
             </div>
             <div class="container_text_current_song">
-                <p>Sinister</p>
-                <p>Brano nome</p>
+                <h6 class="autor_current_song">Sinister</h6>
+                <p class="title_current_song">Brano nome</p>
             </div>
-            <img src="img/favicon.ico" alt="">
-            <img src="img/download.svg" alt="">
 
-
-
-
+            <div class="container_icon_text_current_song">
+                <a href="#"><i class="fa fa-heart"></i></a> 
+                <a href="#"><i class="fa fa-folder"></i></a>
+            </div>
         </div>
-        <div class="footer_center "></div>
-        <div class="footer_right "></div>
+        <!--  /footer left-->
+
+        <!-- footer center-->
+        <div class="current_song_container">
+            <!-- song command-->
+            <div class="container_song_command">
+                <a href="#"><i class="fa fa-random"></i></a>
+                <a href="#"><i class="fa fa-step-backward"></i></a>
+                <a href="#"><i class="far fa-play-circle"></i></a>
+                <a href="#"><i class="fa fa-step-forward"></i></a>
+                <a href="#"><i class="fa fa-redo"></i></a>
+
+            </div>
+            <!-- /song command-->
+
+            <!-- song position-->
+            <div class="flex_container">
+                <span>00:00</span>
+                <div class="progress_bar">
+                    <div class="progress_time">
+                        <div class="progress_cursor"></div>
+                    </div>
+                </div>
+                <span>03:21</span>
+            </div>
+            <!-- /song position-->
+        </div>
+        <!-- /footer center-->
+
+        <!-- footer right-->
+        <div class="volume_container flex_container">
+            <i class="fa fa-bars"></i>
+            <i class="fa fa-desktop"></i>
+            <i class="fa fa-volume-up"></i>
+            
+            <div class="progress_bar">
+                    <div class="progress_time">
+                        <div class="progress_cursor"></div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- /footer right-->
     </footer>
     <!-- /footer-->
-
 </body>
 </html>
