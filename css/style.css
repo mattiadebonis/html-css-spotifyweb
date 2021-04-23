@@ -152,6 +152,9 @@ aside hr{
     width: 25px;
     height: 25px;
 }
+.btn_install{
+    color:gray;
+}
 
 .name_profile{
     color: white;
@@ -299,15 +302,17 @@ main{
 /* /main */
 
 /*footer*/
-footer{
+.control_bar{
     background-color: rgb(56,56,56);
-    height: 75px;
+    height: 100px;
     width: 100vw;
     position: fixed;
     bottom: 0;
+    padding-left: 5px; 
+    padding-right: 5px; 
     justify-content: space-between;
-    padding-left: 20px; 
-    padding-right: 20px;
+    flex-wrap: nowrap;
+
 }
 
 footer *{
@@ -315,65 +320,67 @@ footer *{
     color: lightgray;   
 }
 
-.volume_container{
-    width: 8%;
-}
-
 .current_song_container{
-    width: 40%;
+    width: 50%;
     text-align: center;
 }
 
 .img_current_song{
     width: 40px;
-    
 }
-.container_text_current_song p{ 
-    margin-left:20px;
+
+.text_current_song *{ 
+    margin:1%;
     color: lightgray;
     font-size: 12px;
 }
 
-.container_icon_text_current_song{
-    margin-left: 10px;
-}
-
-.container_icon_text_current_song *{
+.icon_current_song *{
     display: block;
-}
-
-.autor_current_song{
-    margin-left:20px;
-    color:white;
 }
 
 .title_current_song{
     font-size: 12px;
 }
-.container_song_command i{
-    font-size: 24px;
-    padding-right:30px;
+
+.btn_song{
+    font-size: 20px;
+    padding-top: 1%;
+    margin-left: 1%;
 }
 
-.btn_play{
-    border: 1px solid gray;
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-
+#btn_play{
+    font-size: 30px;
 }
 
-/* progressive bar*/
+#btn_play:hover{
+    font-size: 36px;
+}
+
+.container_song_command{
+    justify-content: space-around;
+}
+/* progress bar*/
+
+.container_progress_bar{
+    align-items: center;
+    justify-content: center;
+}
+
 .progress_bar{
     float: left;
     height: 4px;
-    width: 100%;
+    width: 60%;
     border-radius: 5px;
     background-color: #b3b3b3;
-    margin: 0 5px;
     cursor: pointer;
 }
 
+.start_time,
+.end_time{
+    padding: 2%;
+
+}
 .progress_time{    
     position:relative;
     height: 4px;
@@ -396,6 +403,26 @@ footer *{
     bottom: -5px;
     border-radius: 50%;
 }
+
+/* volume*/
+.volume_container{
+    width: 20%;
+    flex-wrap: nowrap;
+}
+
+.volume_container a{
+    margin:5px;
+    display:block;
+}
+
+.volume_btn_container{
+    flex-wrap: nowrap;
+}
+
+#volume_bar{
+    width:50%;
+    margin-left: 10px;
+}
 /* /footer */
 
 
@@ -412,6 +439,12 @@ footer *{
         /* dimensioni button effettua l'upgrade tablet*/
         font-size: 10px;
     }
+
+    .img_current_song{
+        width: 30px;
+    }
+
+    
 }
 
 @media screen and (max-width: 480px) {
@@ -466,6 +499,8 @@ footer *{
         /* dimensioni header smartphone*/
         width: calc(100% - 50px);
     }
+
+   
 
     
 }

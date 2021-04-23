@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no,
     initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <!-- font awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
     <div class="flex_container">
@@ -70,7 +70,7 @@
             <div class="padding_15">
                 <a href="#">
                     <img class="img_download" src="img/download.svg" alt="download">
-                    <span class="hidden_xs">Installa app</span>
+                    <span class="hidden_xs btn_install">Installa app</span>
                 </a>
                 <hr class= "hidden_xs">
                 <a href="#">
@@ -209,64 +209,67 @@
     </div>
 
     <!-- footer -->
-    <footer class="flex_container">
-        <div class="flex_container">
+    <footer class="flex_container control_bar">
+        <div class="flex_container ">
             <div>
                 <img class="img_current_song" src="img/sinister.jpeg" alt="sinister">
             </div>
-            <div class="container_text_current_song">
+            <div class="text_current_song">
                 <h6 class="autor_current_song">Sinister</h6>
                 <p class="title_current_song">Brano nome</p>
             </div>
 
-            <div class="container_icon_text_current_song">
-                <a href="#"><i class="fa fa-heart"></i></a> 
-                <a href="#"><i class="fa fa-folder"></i></a>
+            <div class="icon_current_song">
+                <a href="#"><i class="far fa-heart"></i></a> 
+                <a href="#"><i class="far fa-folder"></i></a>
             </div>
         </div>
         <!--  /footer left-->
 
-        <!-- footer center-->
+        <!-- song time control-->
         <div class="current_song_container">
             <!-- song command-->
-            <div class="container_song_command">
-                <a href="#"><i class="fa fa-random"></i></a>
-                <a href="#"><i class="fa fa-step-backward"></i></a>
-                <a href="#"><i class="far fa-play-circle"></i></a>
-                <a href="#"><i class="fa fa-step-forward"></i></a>
-                <a href="#"><i class="fa fa-redo"></i></a>
+            <div class="container_song_command flex_container">
+                <a href="#"><i class="fa fa-random btn_song"></i></a>
+                <a href="#"><i class="fa fa-step-backward btn_song"></i></a>
+                <a href="#"><i id="btn_play" class="far fa-play-circle btn_song"></i></a>
+                <a href="#"><i class="fa fa-step-forward btn_song"></i></a>
+                <a href="#"><i class="fa fa-redo btn_song"></i></a>
 
             </div>
             <!-- /song command-->
 
             <!-- song position-->
-            <div class="flex_container">
-                <span>00:00</span>
+            <div class="flex_container container_progress_bar">
+                <p class="start_time">01:22</p>
                 <div class="progress_bar">
                     <div class="progress_time">
                         <div class="progress_cursor"></div>
                     </div>
                 </div>
-                <span>03:21</span>
+                <p class="end_time">03:21</p>
             </div>
             <!-- /song position-->
-        </div>
-        <!-- /footer center-->
-
-        <!-- footer right-->
-        <div class="volume_container flex_container">
-            <i class="fa fa-bars"></i>
-            <i class="fa fa-desktop"></i>
-            <i class="fa fa-volume-up"></i>
             
-            <div class="progress_bar">
+        </div>
+        <!-- /song time control-->
+
+        <!-- volume container-->
+        <div class="volume_container flex_container">
+            <div class="flex_container volume_btn_container">
+               <a href="#"><i class="fa fa-bars"></i></a>
+               <a href="#"><i class="fa fa-desktop"></i></a>
+               <a href="#"><i class="fa fa-volume-up"></i></a>
+            </div> 
+            
+            <div id="volume_bar" class="progress_bar">
                     <div class="progress_time">
                         <div class="progress_cursor"></div>
                     </div>
                 </div>
             </a>
         </div>
-        <!-- /footer right-->
+        <!-- /volume container-->
     </footer>
     <!-- /footer-->
 </body>
