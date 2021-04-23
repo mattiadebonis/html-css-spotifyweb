@@ -34,7 +34,6 @@ a{
 }
 /* /Common*/
 
-
 /*aside*/
 #logo{
     height:40px;
@@ -305,7 +304,7 @@ main{
 /*footer*/
 .control_bar{
     background-color: rgb(56,56,56);
-    height: 100px;
+    height: 75px;
     width: 100vw;
     position: fixed;
     bottom: 0;
@@ -313,7 +312,6 @@ main{
     padding-right: 5px; 
     justify-content: space-between;
     flex-wrap: nowrap;
-
 }
 
 footer *{
@@ -330,18 +328,20 @@ footer *{
     width: 40px;
 }
 
+
 .text_current_song *{ 
-    margin:1%;
+    margin-left:20%;
+    margin-right:20%;
     color: lightgray;
     font-size: 12px;
 }
-
+.icon_current_song{
+    flex-wrap: nowrap;
+}
 .icon_current_song *{
     display: block;
-}
+    margin-left:170%;
 
-.title_current_song{
-    font-size: 12px;
 }
 
 .btn_song{
@@ -361,8 +361,8 @@ footer *{
 .container_song_command{
     justify-content: space-around;
 }
-/* progress bar*/
 
+/* progress bar*/
 .container_progress_bar{
     align-items: center;
     justify-content: center;
@@ -380,7 +380,6 @@ footer *{
 .start_time,
 .end_time{
     padding: 2%;
-
 }
 .progress_time{    
     position:relative;
@@ -428,6 +427,8 @@ footer *{
 
 
 /*responsive layout*/
+
+
 @media screen and (max-width: 768px) {
     .album{
         /* dimensioni album tablet*/
@@ -444,6 +445,7 @@ footer *{
     .img_current_song{
         width: 30px;
     }
+
     .content_album{
         height:200px;
     }
@@ -458,7 +460,6 @@ footer *{
 }
 
 @media screen and (max-width: 480px) {
-
     .right_section_sm{
     /* dimensioni sezione destra smartphone*/
         width: calc(100% - 60px);
@@ -482,14 +483,15 @@ footer *{
     #logo_xs{
         /*logo piccolo*/
         display: block;
+        margin-top:20px;
         width: 30px;
     }
 
     .padding_15{
         padding-left: 0px;
         padding-right: 0px;    
-    
     }
+
     /*menù principale barra laterale sistra*/
     .ul_menu_aside{
         margin-top: 10px;
@@ -506,5 +508,4 @@ footer *{
         /* dimensioni header smartphone*/
         width: calc(100% - 50px);
     }
-    
 }
