@@ -58,7 +58,7 @@ aside{
 /*BOTTOM ASIDE*/
 .menu_top_aside li a{
     position: relative;
-    padding-left: 0 15px;
+    padding: 0 15px;
     color:gray;
 }
 
@@ -375,7 +375,7 @@ footer *{
 
 .start_time,
 .end_time{
-    padding-left: 0 10px;
+    padding: 0 10px;
     font-size: 12px;
 }
 
