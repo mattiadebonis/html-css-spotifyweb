@@ -28,21 +28,15 @@ a{
     display: none;
 }
 
-.padding_15{
-    padding-left: 15px;
-    padding-right: 15px;
-}
 /* /Common*/
 
 /*aside*/
 #logo{
     height:40px;
-    margin-top:20px;
-    margin-bottom:20px;
-    margin-left: 15px;
+    margin:20px 0 20px 15px;
 }
 
-.side-bar{
+aside{
     background-color: black;
     width: 200px;
     height: calc(100vh - 75px);
@@ -51,40 +45,44 @@ a{
     color: gray;
 }
 
-.menu_container_aside{
-    overflow-y: auto;
+.top_aside{
     height: calc(100vh - 275px);
     width: 100%;
 }
 
-.menu_container_aside a{
+.top_aside a{
     padding-top: 5px;
     color: gray;
 }
 
-/* Menù principale*/
-.ul_menu_aside li a{
+/*BOTTOM ASIDE*/
+.menu_top_aside li a{
     position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0 15px;
     color:gray;
 }
 
-.ul_menu_aside span{
+.menu_top_aside span{
     height: 25px;
-    line-height: 25px;;
+    line-height: 25px;
 }
 
-.ul_menu_aside img{
+.menu_top_aside img{
     height: 25px;
 }
 
-.ul_menu_aside a:active{
-    border-left: 2px green solid;
-    color:white;
+.menu_top_aside a:hover::before,
+.playlist a:hover::before{
+    content: "";
+    background: green;
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.ul_playlist_aside a:hover{
+.playlist a:hover{
     color: white;
 }
 
@@ -92,31 +90,33 @@ a{
     background-color: white;
 }
 
-.ul_menu_aside a:hover{
+.menu_top_aside a:hover{
     color: white;
 }
-/* / Menù principale*/
 
-/* Menù playlist*/
-.menu_playlist_aside{
+.playlist_container{
+    height:100%;
+    overflow-y: auto;
     margin-top: 20px;
 }
+.title_playlist{
+    padding-left: 15px;
+}
 
-.ul_playlist_aside li{
-    padding-top: 10px;
-    padding-bottom: 10px;
+.playlist li{
+    position:relative;
+    padding: 5px 0 0 15px;
     text-decoration: none;
     font-size: 14px;
 }
 
-.ul_playlist_aside{
+.playlist{
     list-style: none;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 10px 0;
 }
 
-.ul_playlist_aside li:first-child a{
-    line-height: 32px;;
+.playlist li:first-child a{
+    line-height: 32px;
 }
 
 .ul_playlist a{
@@ -131,18 +131,22 @@ a{
     background-color: gray;
 }
 
-/* /Menù playlist*/
+/*BOTTOM ASIDE*/
+.bottom_aside{
+    padding: 15px;
+}
 
 aside hr{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 0.5px solid gray ;
+    margin: 10px 0;
+    border-color: white;
+    border-width: 1px;
 }
 
 .img_download{
     color: gray;
     width: 20px;
     height: 20px;
+    margin-right: 10px;
 }
 
 .img_profile{
@@ -150,7 +154,9 @@ aside hr{
     border-radius: 50px;
     width: 25px;
     height: 25px;
+    margin-right: 10px;
 }
+
 .btn_install{
     color:gray;
 }
@@ -160,14 +166,21 @@ aside hr{
     font-weight: bold;
 }
 
-/*aside*/
+/* /ASIDE*/
 
-/* header*/
-.header_right_section{
+/*MAIN*/
+main{
+    background-color: rgb(39,44,53);
+    width: calc(100% - 200px);
+    height: calc(100vh - 75px);
+    overflow-y: auto;
+}
+
+.main_top{
     background-color: rgb(25,25,36);
     position:fixed;
     width: calc(100% - 200px);
-    height: 75px;
+    height: 60px;
     align-items: center;
     flex-direction: row-reverse;
     opacity: 0.8;
@@ -177,111 +190,93 @@ aside hr{
     text-transform: uppercase;
     background-color: rgb(8,11,19);
     color: white;
-    margin-right: 20px;    
+    margin-right: 20px; 
+    padding: 7px 30px;   
     border: 1px solid white;
     border-radius: 30px;
-    padding: 10px 30px;
+    font-size: 12px;
 }
 
 .btn_upgrade:hover{
-    padding: 15px 50px;
-}
-/* /header*/
-
-/*sezione principale*/
-.right_section{
-    background-color: rgb(39,44,53);
-    width: calc(100% - 200px);
-    height: calc(100vh - 75px);
-    overflow-y: auto;
+    font-size: 13px;
+    transition: 0,2s;
 }
 
-main{
-    padding: 100px 10px 10px 10px;
-    height:calc(100% - 50px);
-    width:100%;
-}
-
-/* Menù orizzontale main*/
 .menu_main{
     vertical-align: top;
-    display: flex;
-    flex-direction:row;
-    height:100px;
-    width: 100%;
     justify-content: center;
+    width: 100%;
+    margin: 70px 30px 30px 0;
 }
-
+.menu_main ul{
+    text-align:center;
+}
 .menu_main li{
     display:inline-block;
     list-style: none;
-    height: 40px;
     align-items: flex-start;
-    padding-right: 20px;
+    padding: 7px;
 }
 
 .menu_main a{
     position: relative;
     color:gray;
+    font-size:12px;
 }
 
 .menu_main a:hover{
     color: white;
+    transition: color 0.3s;
 }
 
 .menu_main a:hover::after{
     content: "";
     position: absolute;
-    top: 20px;
+    top: 18px;
     left: 50%;
     transform: translateX(-50%);
     width: 40px;
-    height: 3px;
-    margin-top: 5px;
+    height: 2px;
+    margin-top: 3px;
     background-color: #1DB954;
+    transition: background-color 0.3s;
 }
 
-/* /Menù orizzontale main*/
 .title_section{
-    margin:20px 10px;
-    font-size: 26px;
+    margin:20px 10px 0;
+    font-size: 18px;
     color: white;
 }
 
 .subtitle_section{
-    margin: 10px;
+    margin: 0 10px 10px ;
     font-weight: none;
     color: gray;
 }
 
-.row{
-    float:left;
+.song-row{
+    display:flex;
+    flex-wrap:wrap;
     width: 100%;
-    margin-top: auto;
-    margin-bottom: 40px;
+    margin: 20px 0 40px;
 }
 
 .album h6{
     color:white;
 }
 
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 .album{
-    float:left;
-    width: calc((100vw - 200px) /6  - 1vw);
+    width: calc((100vw - 200px) /6  - 10px);
+    margin-top: 10px;
 }
 
 .autor_album{
+    margin-top: 10px;
     color: gray;
 }
 
 .content_album{
-    width: 80%;
+    width: 90%;
     max-width: 200px;
     margin: 0 auto;
     text-align: center;
@@ -299,88 +294,101 @@ main{
 .circle_image{
     border-radius: 50%;
 }
-/* /main */
+/* /MAIN */
 
-/*footer*/
-.control_bar{
+/*FOOTER*/
+footer{
     background-color: rgb(56,56,56);
     height: 75px;
     width: 100vw;
     position: fixed;
     bottom: 0;
-    padding-left: 5px; 
-    padding-right: 5px; 
+    padding-left: 0 5px; 
     justify-content: space-between;
     flex-wrap: nowrap;
 }
 
 footer *{
-    margin: auto 0;
-    color: lightgray;   
+    color:white;   
 }
 
-.current_song_container{
-    width: 50%;
-    text-align: center;
+/* footer left */
+.left_footer{
+    width: 30%;
+    align-items:center;
 }
 
-.img_current_song{
+.left_footer >*{
+    padding-left: 15px;
+}
+
+.left_footer i {
+    padding-right:10px;
+}
+.left_footer i:hover {
+    color:white;
+}
+
+.img_footer_left{
     width: 40px;
 }
 
-
-.text_current_song *{ 
-    margin-left:20%;
-    margin-right:20%;
+.current_song *{ 
     color: lightgray;
     font-size: 12px;
 }
-.icon_current_song{
-    flex-wrap: nowrap;
-}
-.icon_current_song *{
-    display: block;
-    margin-left:170%;
 
+/* footer center */
+.center_footer{
+    width: 40%;
+    height: 100%;
+}
+
+.center_footer a{
+    margin:5px;
+    display:block;
+}
+
+.song_btn_container{
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
 }
 
 .btn_song{
-    font-size: 20px;
-    padding-top: 1%;
-    margin-left: 1%;
+    font-size: 18px;
+    padding: 10px 0 0 20px;
 }
 
 #btn_play{
-    font-size: 30px;
+    font-size: 32px;
 }
 
-#btn_play:hover{
-    font-size: 36px;
+.progress_song_container{
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
 }
 
-.container_song_command{
-    justify-content: space-around;
+.start_time,
+.end_time{
+    padding-left: 0 10px;
+    font-size: 12px;
 }
 
 /* progress bar*/
-.container_progress_bar{
-    align-items: center;
-    justify-content: center;
-}
-
 .progress_bar{
     float: left;
     height: 4px;
-    width: 60%;
+    width: 70%;
     border-radius: 5px;
     background-color: #b3b3b3;
     cursor: pointer;
 }
 
-.start_time,
-.end_time{
-    padding: 2%;
-}
 .progress_time{    
     position:relative;
     height: 4px;
@@ -405,75 +413,47 @@ footer *{
 }
 
 /* volume*/
-.volume_container{
-    width: 20%;
+.right_footer{
+    width: 30%;
     flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-.volume_container a{
-    margin:5px;
-    display:block;
-}
-
-.volume_btn_container{
-    flex-wrap: nowrap;
+.right_footer i{
+    padding-right:15px;
 }
 
 #volume_bar{
-    width:50%;
+    width:30%;
     margin-left: 10px;
 }
-/* /footer */
+/* /FOOTER */
 
-
-/*responsive layout*/
-
-
+/*TABLET */
 @media screen and (max-width: 768px) {
     .album{
         /* dimensioni album tablet*/
-        margin-top:10px;
         width: calc((100vw - 200px) /4 - 10px);
-        height:100%;
     }
 
-    .btn_upgrade{
-        /* dimensioni button effettua l'upgrade tablet*/
-        font-size: 10px;
+    .progress_bar{
+        width: 40%;
     }
-
-    .img_current_song{
-        width: 30px;
-    }
-
-    .content_album{
-        height:200px;
-    }
-
-    .content_album h6{
-        font-size: 12px;
-    }
-    .autor_album{
-        font-size: 10px;
-    }
-
 }
 
-@media screen and (max-width: 480px) {
-    .right_section_sm{
-    /* dimensioni sezione destra smartphone*/
+/*SMARTPHONE */
+@media screen and (max-width: 566px) {
+    main{
         width: calc(100% - 60px);
     }
 
     .album{
-    /* dimensioni album smartphone*/
-        width: calc((100vw - 50px) /2 - 15px);
+        width: calc((100vw - 50px) /2 - 20px);
     }
 
-    .side-bar{
-        /* dimensioni barra laterale sinistra*/
+    aside{
         width: 50px;
-        padding-left: 15px;
     }
 
     .hidden_xs{
@@ -481,31 +461,24 @@ footer *{
     }
 
     #logo_xs{
-        /*logo piccolo*/
         display: block;
-        margin-top:20px;
         width: 30px;
+        margin: 20px auto;
     }
 
-    .padding_15{
-        padding-left: 0px;
-        padding-right: 0px;    
-    }
-
-    /*menù principale barra laterale sistra*/
     .ul_menu_aside{
         margin-top: 10px;
     }
+
     .ul_menu_aside img{
         width:20px;
     }
-
-    .ul_menu_aside li a{
-        padding: 5px;
+    
+    .bottom_aside hr{
+        margin-right: 10px;
     }
 
-    .header_right_section{
-        /* dimensioni header smartphone*/
+    .main_top{
         width: calc(100% - 50px);
     }
 }
